@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Post a Tweet!</title>
+    </head>
+    <body>
+    <form th:action="@{/tweetSent}"
+          th:object="${tweetForm}" method="GET">
+        First Name:
+        <input type="text" />
+        <br/>
+        <input type="submit" value="Send" />
+    </form>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <title>Trees</title>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}"/>
+  </head>
+  <body>
+    <h1>Baumliste</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Familie</th>
+        <th>Samen</th>
+        <th>Sauerstoffproduktion pro Stunde</th>
+      </tr>
+      <tr th:each ="tree : ${forest}">
+        <td th:utext="${tree.treeName}">...</td>
+        <td th:utext="${tree.treeKind}">...</td>
+        <td th:utext="${tree.treeseed}">...</td>
+        <td th:utext="${tree.oxyperhour}">...</td>
+      </tr>
+    </table>
+    <a href="addATree">Fuege einen Baum hinzu!</a>
+    <br/>
+    <br/>
+    <br/>
+    <p>Fivtive Werte!</p>
+  </body>
+</html>

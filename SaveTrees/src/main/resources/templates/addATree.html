@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a Tree</title>
+</head>
+<body>
+    <form th:action="@{/addATree}"
+      th:object="${treeForm}" method="POST">
+    Baum Name:
+    <input type="text" th:field="*{treename}" />
+    <br/>
+    Sauerstoffproduktion pro Stunde:
+        <input type="text" th:field="*{oxyperhour}" />
+    <br />
+     Baum Familie:
+    <input type="text" th:field="*{treekind}" />
+    <br/>
+     Baumfruechte:
+        <input type="text" th:field="*{treeseed}" />
+        <br/>
+    <input type="submit" value="Create" />
+    </form>
+</body>
+</html>

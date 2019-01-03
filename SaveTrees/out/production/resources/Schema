@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS trees;
+CREATE TABLE trees (
+    id INT NOT NULL AUTO_INCREMENT,
+    treename VARCHAR(100) NOT NULL,
+    treekind VARCHAR(100) NOT NULL,
+    treeseed VARCHAR(100) NOT NULL,
+    oxy_perhour INT NOT NULL);
